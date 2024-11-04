@@ -23,7 +23,10 @@ SECRET_KEY = "django-insecure-h$*=0y-*sk%2s*%#wm9)s1%q_n%i1_dj19c7-up7nxto^j8uvz
 DEBUG = os.environ.get("DEBUG") == "TRUE"
 
 ALLOWED_HOSTS = [
+    # NOTE: when we have a hostname, we must do this:
     "our.cool.app",
+    # ...but for now, we can just do this:
+    "localhost",
 ]
 
 
@@ -127,6 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

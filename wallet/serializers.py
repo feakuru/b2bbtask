@@ -20,7 +20,7 @@ class TransactionSerializer(serializers.HyperlinkedModelSerializer):
             raise serializers.ValidationError(
                 {"amount": "Transaction must not result in negative balance"}
             )
-        # The operation below is the reason for enabling ATOMIC_REQUESTS,
+        # NOTE: The operation below is the reason for enabling ATOMIC_REQUESTS,
         # otherwise this might result in race conditions.
         # In a real application, we would most likely apply the decorator
         # @transaction.atomic on a per-request basis

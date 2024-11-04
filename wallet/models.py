@@ -8,5 +8,5 @@ class Wallet(models.Model):
 
 class Transaction(models.Model):
     wallet = models.ForeignKey(to=Wallet, on_delete=models.PROTECT)
-    txid = models.TextField(unique=True)
+    txid = models.TextField(unique=True, max_length=1024)
     amount = models.IntegerField()
