@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+lib/
+lib64/
+*.egg
+*.log
+*.pot
+.env
+*.sqlite3
+.ropeproject/
